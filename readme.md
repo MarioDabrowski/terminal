@@ -2,18 +2,16 @@
 
 Below is a list of terminal commands and tips I've gathered over the last little while. I will keep updating the list as I learn more. If you have any great resources or tips to add just shot me a message.
 
-***
+<br>
 
 #### Table of Contents
 
 - General Tips
     - Autocomplete
 
-***
+<br>
 
-### General Tips
-
-***
+## General Tips
 
 ##### Autocomplete
 
@@ -52,15 +50,11 @@ The elements appended to the commands are called flags. Ex. -a, -g, -f
 To chain multiple commands simply seperate then with a semi collon. Ex. (ls; mkdir folder)
 Instead of semi collons you can also use && in between your commands.
 
+<br>
+
+## Commonly Used Commands
 
 
-
-
-***
-
-### Commonly Used Commands
-
-***
 
 ```
 mkdir [folder name]
