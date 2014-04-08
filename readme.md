@@ -9,7 +9,7 @@ Below is a list of terminal commands and tips I've gathered over the last little
 - General Tips
     - Autocomplete
 
-- - -
+***
 
 ### General Tips
 
@@ -34,21 +34,20 @@ Command + Shift + ]
 option + click
 ```
 
-Remove the username + computer name from your terminal prompt:
+##### Remove the username + computer name from your terminal prompt:
+
 1. Open up your .bashrc file sudo nano /etc/bashrc
 2. edit your PS1 to be PS1='\w \$ '
 
 The elements appended to the commands are called flags. Ex. -a, -g, -f
 
-Navigation Map
+##### Navigation Map
+
+```
 / Root
 ./ Current folder
 ../ Previous Folder
-
-
-
-
-Command Basics
+```
 
 To chain multiple commands simply seperate then with a semi collon. Ex. (ls; mkdir folder)
 Instead of semi collons you can also use && in between your commands.
@@ -57,10 +56,16 @@ Instead of semi collons you can also use && in between your commands.
 
 
 
-Commonly Used Commands
+***
 
+### Commonly Used Commands
+
+***
+
+```
 mkdir [folder name]
-    Create a directory
+```
+Create a directory
 
 ls
     Get a listing of the files from the current folder you're inside of
