@@ -9,7 +9,8 @@ Below is a list of terminal commands and tips I've gathered over the last little
 - [General Tips](#general-tips)
 - [Listing Directories & Reading Files](#listing-directories--reading-files)
 - [Navigating The File System](#navigating-the-file-system)
-- [Create, Move, & Delete Files & Folders](#create-move--delete-files--folders)
+- [Create & Delete Files & Folders](#create--delete-files--folders)
+- [Move & Copy Files & Folders](#move--copy-files--folders)
 - [Manipulating Files](#manipulating-files)
 - [Using FTP](#using-ftp)
 - [Zipping Files](#zipping-files)
@@ -19,8 +20,10 @@ Below is a list of terminal commands and tips I've gathered over the last little
 - [Reboot or Shutdown Computer](#reboot-or-shutdown-computer)
 - [Nano Editor](#nano-editor)
 - [Less Common Commands](#less-common-commands)
-- [Creating Custom Terminal Commands](#creating-custom-terminal-commands-permanent-aliases)
-- [Additional Resources](#additional-resources)
+- [Creating Custom Terminal Commands](#custom-terminal-commands--tweaks)
+- Additional Resources
+  - [Videos](#videos)
+  - [Articles](#articles)
 
 <br>
 
@@ -45,13 +48,11 @@ Command + Shift + ]
 option + click
 ```
 
-##### Remove the username + computer name from your terminal prompt:
-
-1. Open up your `.bashrc` file by typing `sudo nano /etc/bashrc`
-2. edit PS1 to be PS1='\w \$ '
-3. hit `control + X' to close the file, when asked to save hit `Y` then hit enter to keep the file name the same.
+##### Flags
 
 The elements appended to the commands are called flags. Ex. -a, -g, -f
+
+##### Chaining Commands
 
 To chain multiple commands simply seperate then with a semi collon. Ex. (ls; mkdir folder)
 Instead of semi collons you can also use && in between your commands.
@@ -76,20 +77,31 @@ Key/Command | Description
 
 Key/Command | Description
 :---|:---
-`cd /` |  Takes you to the root of your computer
-`cd ../` | Takes you one folder back
+`cd [folder]` |  *Change directory*
+`cd ~` | *Home Directory*
+`cd /` |  *Takes you to the root of your computer*
+`cd ..` | *Takes you one folder back*
 
 <br>
 
-## Create, Move, & Delete Files & Folders
+## Create & Delete Files & Folders
 
 Key/Command | Description
 :---|:---
-`mkdir [dir]` | *Create a directory*
+`mkdir [dir]` | *Create a directory -* `[dir] [dir]` *will create multiple folders*
 `touch [file]` | *Create a file*
 `rm [file]` | *Remove a file*
 `rm -r [dir]` | *Remove a folder*
-`mv [file or dir] [dir]` | *This will move a folder or file to a desired location.*
+`mv [file] [target file]` | *Rename a file*
+
+<br>
+
+## Move & Copy Files & Folders
+
+Key/Command | Description
+:---|:---
+`mv [file or dir] [target dir]` | *This will move a folder or file to a desired location.*
+`cp [dir] [target dir] -r` | *This will copy a directory to a target dir. The* `-r` *flag means recursive, or "this folder and everything in it"*
 
 <br>
 
@@ -128,11 +140,11 @@ Key/Command | Description
 
 Key/Command | Description
 :---|:---
-`afplay [file]` | *Will play an audio file through Terminal.  Press ctrl+c to stop*
+`afplay [file]` | *Will play an audio file through Terminal.  Press* `ctrl+c` *to stop*
 `say [text]` | **Will get your computer to say something*
 `say -f [file]` | *Will speak the contents of that file*
 `say -v ?` | *View the available voices*
-`say -v [voice name]` | *Will speak whatever you write in that particular voice  To exit hit ctrl+c*
+`say -v [voice name]` | *Will speak whatever you write in that particular voice  To exit hit* `ctrl+c`
 
 <br>
 
@@ -140,7 +152,6 @@ Key/Command | Description
 
 Key/Command | Description
 :---|:---
-`ipconfig getifaddr en0` | *Get your network ip address.*
 `whoami` | *Shows your user name*
 
 <br>
@@ -182,10 +193,9 @@ Key/Command | Description
 `control + G` | *Pulls up the nano help file*
 `control + O` | *saves the file without closing it*
 `control + X` | *closes the file, will ask you to save the file*
-`control + T` | *while naming your file when beign saved hitting control+T will bring up a file browser that will allow you to overwrite files & navigate through your folder structure.*
+`control + T` | *while naming your file when beign saved hitting* `control + T` *will bring up a file browser that will allow you to overwrite files & navigate through your folder structure.*
 `control + \` | *Find and replace.*
 `control + W` | *Search*
-`control + C` | *Find out what line the cursor is currently on.*
 `control + _` | *Move to a specific line.*
 `control + _ control + Y` | *Move to the top of the file*
 `control + _ control + V` | *Move to the bottom of the file*
@@ -226,7 +236,7 @@ Key/Command | Description
 <br>
 
 
-## Creating Custom Terminal Commands (Permanent Aliases)
+## Custom Terminal Commands & Tweaks
 
 If you can't find a command to do something specifit you can create your own.
 
@@ -240,11 +250,24 @@ mkgo(){
     mkdir $1 && cd $1
 }
 ```
+
+##### Remove the username + computer name from your terminal prompt:
+
+1. Open up your `.bashrc` file by typing `sudo nano /etc/bashrc`
+2. edit PS1 to be PS1='\w \$ '
+3. hit `control + X' to close the file, when asked to save hit `Y` then hit enter to keep the file name the same.
+
 <br>
 
 ## Additional Resources
 
+### Videos
+
 - [23 Part Video Lesson](https://www.youtube.com/user/allthingseducational/videos)
+- [Navigating the Terminal: A Gentle Introduction](http://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855)
+
+### Articles
+
 - [40 Terminal Tips and Tricks You Never Thought You Needed](http://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192)
-- [Command Line Fu](http://www.commandlinefu.com/commands/browse)
 - [Terminal Cheatsheet](https://github.com/0nn0/terminal-mac-cheatsheet/wiki/Terminal-Cheatsheet-for-Mac-(-basics-))
+- [Command Line Fu](http://www.commandlinefu.com/commands/browse)
