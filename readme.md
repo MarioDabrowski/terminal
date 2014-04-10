@@ -1,5 +1,7 @@
 # Terminal Cheatsheet
 
+Shortcut to access this file: LearnTerminal.com
+
 Below is a list of terminal commands and tips I've gathered over the last little while. I will keep updating the list as I learn more. If you have any great resources or tips to add just shot me a message.
 
 <br>
